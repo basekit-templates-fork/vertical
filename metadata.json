@@ -1,15 +1,15 @@
 {
-	"name":"Surf and Love",
-	"thumbnail":"surfandlove.png",
-	"screenshot":"surfandlove.png",
+	"name":"Vertical",
+	"thumbnail":"vertical.png",
+	"screenshot":"vertical.png",
 	"templateType":"standard",
     "pageTypes": [
         "home"
     ],
     "tags": {
-    "en": ["clean", "nature", "white", "modern", "blog", "professional", "simple", "surf", "love", "warm", "sans serif"],
-    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
-    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+        "en": ["clean", "trade", "construction", "build", "DIY"],
+        "es": ["limpio", "comercio", "construcción", "construcción", "bricolaje"],
+        "br": ["limpo", "comércio", "construção", "construção", "DIY"]
     },
     "colorSwatches":
     {
@@ -17,7 +17,7 @@
             "color1":"#f3f0eb",
             "color2":"#aaaaaa",
             "color3":"#8DC0B9",
-            "color4":"#444444",
+            "color4":"#000000",
             "color5":"#979797",
             "color6":"#444444",
             "color7":"#ffffff"
@@ -60,9 +60,9 @@
         }
     },
     "fontSwatch": {
-       "title": "Lato",
+       "title": "Futura",
         "font1": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "32px",
             "font-weight": "400",
             "line-height": "42px",
@@ -70,7 +70,7 @@
             "letter-spacing": "inherit"
         },
         "font2": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "26px",
             "font-weight": "400",
             "line-height": "36px",
@@ -78,7 +78,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "22px",
             "font-weight": "400",
             "line-height": "32px",
@@ -86,7 +86,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
@@ -94,7 +94,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Myriad pro\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Raleway\", \"Lucida Grande\", Helvetica, sans-serif",
             "font-size": "15px",
             "font-weight": "400",
             "line-height": "26px",
@@ -102,7 +102,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "30px",
@@ -113,9 +113,9 @@
             "background-color-hover": "@color-swatch2"
          },
         "font7": {
-            "font-family": "\"Open Sans\", Helvetica, Verdana, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "14px",
-            "font-weight": "300",
+            "font-weight": "400",
             "line-height": "24px",
             "color": "@color-swatch7",
             "letter-spacing": "inherit",
@@ -123,26 +123,26 @@
             "background-color-hover": "darken(@color-swatch7,10%)"
         },
         "font8": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "56px",
-            "font-weight": "700",
-            "line-height": "70px",
-            "color": "@color-swatch7",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "28px",
+            "font-weight": "400",
+            "line-height": "36px",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font9": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
             "font-size": "18px",
-            "font-weight": "700",
+            "font-weight": "400",
             "line-height": "24px",
-            "color": "@color-swatch7",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font10": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
-            "font-size": "34px",
-            "font-weight": "700",
-            "line-height": "42px",
+            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-size": "28px",
+            "font-weight": "400",
+            "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "1px"
         }
