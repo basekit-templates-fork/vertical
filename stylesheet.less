@@ -457,6 +457,7 @@ button.btn,
 .widget.dropbox button,
 .widget.socialicons span a, 
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
+<<<<<<< HEAD
 .ecombasket-remove-button {
     background-color: @color-swatch3;
     border: none;
@@ -470,6 +471,32 @@ button.btn,
         background-color: lighten(@color-swatch3,5%);
         border: none;
     }
+}
+
+.widget.tweet a {
+    padding: 12px 10px 12px 40px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.widget.ecombasket .ecombasket-list-container ul li .ecombasket-item-info .ecombasket-remove-button {
+    text-decoration: none;
+=======
+.ecombasket-remove-button,
+.ecombasket-summary-link {
+	background-color: @color-swatch3;
+	border: none;
+	-webkit-transition: background-color .2s;
+	-moz-transition: background-color .2s;
+	-ms-transition: background-color .2s;
+	transition: background-color .2s;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	&:hover {
+		background-color: lighten(@color-swatch3,5%);
+		border: none;
+        text-decoration: none;
+	}
+>>>>>>> upstream/develop
 }
 
 .widget.tweet a {
@@ -497,16 +524,25 @@ button.btn,
 }
 
 .widget.socialicons, .widget.profile .bk-profile-socialicons {
-  min-height:32px;
+  min-height: 32px;
 }
 
 .widget.profile .bk-profile-socialicons {
+<<<<<<< HEAD
     margin:0;
 }
 
 footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     background-color: @color-swatch3;
     border-radius:3px;
+=======
+	margin: 0;
+}
+
+footer.bk-footer .widget.profile .bk-profile-socialicons span a {
+	background-color: @color-swatch3;
+	border-radius: 3px;
+>>>>>>> upstream/develop
 }
 
 footer.bk-footer .widget.profile .bk-profile-socialicons span a:hover {
@@ -514,8 +550,13 @@ footer.bk-footer .widget.profile .bk-profile-socialicons span a:hover {
 }
 
 footer.bk-footer .twitter-content {
+<<<<<<< HEAD
     margin:0;
     padding:0;
+=======
+	margin: 0;
+	padding: 0;
+>>>>>>> upstream/develop
 }
 
 .widget.socialicons {
@@ -523,8 +564,13 @@ footer.bk-footer .twitter-content {
 }
 
 hr.line {
+<<<<<<< HEAD
     background-color: fade(@color-swatch5, 25%);
     height:1px;
+=======
+	background-color: fade(@color-swatch5, 25%);
+	height: 1px;
+>>>>>>> upstream/develop
 }
 
 button.btn,
@@ -534,18 +580,31 @@ button.btn,
 }
 
 .widget.clicktocall a {
+<<<<<<< HEAD
     padding: 13px 14px 8px;
 }
 
 .blog-search-submit-button {
     padding: 9px 14px 9px 14px;
     margin-left:10px;
+=======
+	padding: 7px 14px 8px;
+}
+
+.blog-search-submit-button {
+	padding: 9px 14px 9px 14px;
+>>>>>>> upstream/develop
     vertical-align: middle;
 }
 
 .signupform fieldset button {
+<<<<<<< HEAD
     padding: 9px 16px 6px 16px;
     margin-left:5px;
+=======
+	padding: 7px 16px;
+	margin-left: 5px;
+>>>>>>> upstream/develop
 }
 
 .widget.profile form button {
@@ -554,6 +613,7 @@ button.btn,
 }
 
 .widget.clicktocall a {
+<<<<<<< HEAD
     border: 2px solid @color-swatch3;
     display: inline-block;
     margin-bottom: 1em;
@@ -592,6 +652,118 @@ button.btn,
 .twitter-content {
     padding-bottom: 10px;
     margin-bottom: 10px;
+=======
+	border: 2px solid @color-swatch3;
+	display: inline-block;
+	margin-bottom: 1em;
+	border-radius: 3px;
+	&:hover {
+		border-color: lighten(@color-swatch3, 5%);
+	}
+}
+
+/* ===============================
+   TWITTER WIDGET
+   =============================== */
+
+@twitterProfilePicSize: 98px;
+
+.widget.twitter {
+  background-color: lighten(@color-swatch5,47%);
+  @media @tablet {
+    padding: 15px;
+  }
+  ul.twitter {
+    li {
+      position: relative;
+      min-height: @twitterProfilePicSize;
+      margin-bottom: 30px;
+      padding-bottom: 0;
+      @media @tablet {
+        margin-bottom: 15px;
+        min-height: 132px;
+      }
+      @media @mobile {
+         min-height: 75px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      // footer
+      a, time + span, time {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        font-family: @font-swatch5-font-family;
+        line-height: 1;
+        font-weight: normal;
+        color: fade(@color-swatch5,50%);
+        text-decoration: none;
+        @media @mobile {
+          font-size: bkscale(@font-swatch5-font-size, 0.6);
+        }
+      }
+      // profile pic
+      .twitter-profile-pic {
+        width: @twitterProfilePicSize;
+        height: @twitterProfilePicSize;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @media @tablet {
+          margin: 16px 16px 0;
+        }
+        @media @mobile {
+          width: (@twitterProfilePicSize * 0.45);
+          height: (@twitterProfilePicSize * 0.45);
+
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+      }
+      .twitter-content {
+        line-height: 1.2em;
+        margin-left: (@twitterProfilePicSize + 20);
+        @media @tablet {
+          padding: 15px;
+        }
+        @media @mobile {
+          margin-left: (@twitterProfilePicSize * 0.55 + 12);
+          padding: 10px;
+        }
+        .bk-full-name {
+            display: inline-block;
+            font-family: @font-swatch4-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @font-swatch4-color;
+            border-bottom: 2px solid lighten(@color-swatch5,5%);
+            padding-bottom: 4px;
+          @media @mobile {
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+          }
+        }
+        p {
+          padding-top: 20px;
+          font-family: @font-swatch5-font-family;
+          @media @tablet {
+            padding-top: 0;
+            font-size: bkscale(@font-swatch5-font-size,0.8);
+            line-height: bkscale(@font-swatch5-line-height,0.8);
+          }
+          a {
+            font-family: @font-swatch5-font-family;
+            font-size: @font-swatch5-font-size;
+            color: @color-swatch3;
+            line-height: @font-swatch5-line-height;
+          }
+        }
+      }
+    }
+  }
+>>>>>>> upstream/develop
 }
 
 /*
@@ -809,7 +981,11 @@ header.bk-header {
         margin-left: 0;
         width: 100%;
     }
+    @media @mobile {
+        width: 90%;
+    }
 }
+
 .header-section, .footer-section {
     background: fade(@color-swatch5, 10%);
     margin: 0 auto;
@@ -1179,6 +1355,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .widget.blogsearch {
+<<<<<<< HEAD
     display:block;
     clear:both;
     margin:20px 0px 0px 0px;
@@ -1206,6 +1383,35 @@ h1, h2, h3, h4, h5, h6 {
         background-repeat: no-repeat;
         border-bottom: 1px solid darken(@color-swatch1, 10%);
     }
+=======
+	display:block;
+	clear:both;
+	margin:20px 0px 0px 0px;
+	label {
+		height: 0;
+		text-indent: -200px;
+		overflow: hidden;
+		padding-top: 0;
+	}
+	input[type=search], input[type=search]:focus {
+		width: 75%;
+		border-radius: 3px;
+		border: none;
+		padding: 0;
+		padding-top: 8px;
+		margin: 0 10px 10px 0;
+		text-indent:10px;
+	}
+	button, button:hover {
+		border-radius: 3px;
+		border: none;
+		background-image: image('/images/icon-search.png');
+		background-size: 18px 18px;
+		background-position: right center;
+		background-repeat: no-repeat;
+		border-bottom: 1px solid darken(@color-swatch1, 10%);
+	}
+>>>>>>> upstream/develop
 }
 .svg .widget.blogsearch button {
     background-image: image('/images/icon-search.svg');
@@ -1349,6 +1555,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: inherit;
 }
 
+<<<<<<< HEAD
+=======
+// Image widget
+.widget.image span.image-title,
+.widget.image span.image-description {
+    text-align: inherit;
+}
+
+>>>>>>> upstream/develop
 
 /* ===============================
    SLIDESHOW WIDGET
@@ -1783,6 +1998,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                 padding: 0 0 10px 0;
                 margin: 0 0 10px 0;
 
+<<<<<<< HEAD
             }
 
             td {
@@ -1929,6 +2145,184 @@ input[type=search], input[type=text] .signupform fieldset input {
                             line-height: 30px;
                             left: 30px;
                             right: 30px;
+=======
+            }
+
+            td {
+                border-bottom: 1px solid @color-swatch2;
+                @media @mobile {
+                    border-bottom: none;
+                }
+            }
+            // Image
+            td:nth-child(1) {
+                @media @mobile {
+                    width: auto;
+                }
+                .image-wrap {
+                    width: 100%;
+                    height: 0;
+                    padding-bottom: 100%;
+                    float: none;
+                    background-size: cover;
+                    background-position: center;
+                    @media @mobile {
+                        padding-bottom: 0;
+                        height: auto;
+                        background-position: -1000px;
+                    }
+                    img {
+                        display: none;
+                        @media @mobile {
+                            display: block;
+                            width: 60%;
+                            height: auto;
+>>>>>>> upstream/develop
+                        }
+                    }
+                }
+            }
+<<<<<<< HEAD
+            td.basket-summary-amount {
+                text-align: right;
+                @media @mobile {
+                    text-align: left;
+                    position: absolute;
+                    right: 0;
+                    bottom: 20px;
+                }
+            }
+        }
+
+        // Sub Total
+        tbody tr:last-child {
+            td {
+                font-size: @font-swatch4-font-size;
+                @media @mobile {
+                    text-align: left;
+                    border-top: none;
+                    font-size: bkscale(@font-swatch4-font-size, 0.9);
+                }
+                &.basket-summary-subtotal {
+                    text-align: right;
+                    @media @mobile {
+                        border-top: 1px solid @color-swatch2;
+                    }
+                }
+            }
+        }
+=======
+            // Product info
+            td:nth-child(2) {
+                padding-left: 1em;
+                padding-right: 170px;
+                vertical-align: top;
+                position: relative;
+                border-right: 1px solid mix(@color-swatch2, #fff, 10%);
+                @media @bp-checkout-compact {
+                    padding-right: 0;
+                }
+                @media @mobile {
+                    width: auto;
+                    padding-left: 0;
+                    border-right: none;
+                }
+                // Name
+                .basket-summary-productname {
+                    font-size: @font-swatch4-font-size;
+                    display: block;
+                    @media @mobile {
+                        font-size: bkscale(@font-swatch4-font-size, 0.8);
+                    }
+                    &:hover {
+                        background-color: mix(@color-swatch2, #fff, 6%);
+                    }
+                }
+                // Price
+                .basket-summary-pricepu {
+                    font-size: @font-swatch4-font-size;
+                    @media @mobile {
+                        font-size: bkscale(@font-swatch4-font-size, 0.8);
+                    }
+                }
+                // Quantity label
+                .basket-summary-quantity {
+                    width: 150px;
+                    position: absolute;
+                    right: 20px;
+                    display: block;
+                    top: 10px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: bkscale(@font-swatch5-font-size, 0.8);
+                    @media @bp-checkout-compact {
+                        position: relative;
+                        right: 0;
+                        top: 0;
+                        width: 130px;
+                    }
+                }
+                // Quantity button
+                .basket-summary-quantitybtn {
+                    background-color: transparent;
+                    margin: 0;
+                    position: relative;
+                    width: 150px;
+                    height: 40px;
+                    @media @bp-checkout-compact {
+                        position: relative;
+                        right: 0;
+                        top: 0;
+                    }
+                    @media @mobile {
+                        height: 30px;
+                        width: 130px;
+                    }
+                    button {
+                        font-family: @font-swatch5-font-family;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 40px;
+                        border: none;
+                        cursor: pointer;
+                        padding: 0;
+                        position: absolute;
+                        top: 0;
+                        width: 40px;
+                        height: 40px;
+
+
+                        @media @mobile {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                        }
+
+
+                        &.js-remove {
+                            left: 0;
+                        }
+                        &.js-add {
+                            right: 0;
+                        }
+                    }
+                    // Count
+                    span {
+                        color: darken(@color-swatch2, 80%);
+                        height: 40px;
+                        line-height: 40px;
+                        position: absolute;
+                        left: 40px;
+                        right: 40px;
+                        text-align: center;
+                        top: 0;
+                        display: block;
+                        width: 70px;
+                        @media @mobile {
+                            height: 30px;
+                            line-height: 30px;
+                            left: 30px;
+                            right: 30px;
                         }
                     }
                 }
@@ -1961,6 +2355,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                 }
             }
         }
+>>>>>>> upstream/develop
     }
 }
 
@@ -2363,6 +2758,7 @@ input[type=search], input[type=text] .signupform fieldset input {
         height: auto;
         min-height: 300px;
     }
+<<<<<<< HEAD
     .widget.gallery ul li {
         width: 100%;
         height:400px;
@@ -2407,4 +2803,50 @@ input[type=search], input[type=text] .signupform fieldset input {
       .widget .extendednavigation ul li.folder .text {
         padding: 0px 10px 0 0;
     }
+=======
+	.widget.gallery ul li {
+		width: 100%;
+		height:400px;
+	}
+	.widget.gallery ul {
+		margin-bottom:0;
+	}
+	.responsivecolumns .columns-two-left, .columns-two-50-50 .columns-two-left {
+		margin-bottom:2%;
+	}
+	.widget.companyname a {
+		font-size: bkscale(@font-swatch10-font-size, 0.7);
+		line-height: bkscale(@font-swatch10-line-height, 0.7);
+	}
+	.widget .extendednavigation ul li {
+		padding:0;
+	}
+	footer.bk-footer .widget .extendednavigation ul li {
+		width:50%!important;
+	}
+	footer.bk-footer {
+		padding: 30px 0px 40px;
+	}
+	.widget.clicktocall a {
+		border: none;
+		padding: 10px 20px 10px 40px;
+		background-color: @color-swatch3;
+        font-weight: @font-swatch7-color;
+        -webkit-font-smoothing: antialiased;
+	}
+	.widget.clicktocall a:hover {
+		border: none;
+		padding: 10px 20px 10px 40px;
+		background-color: lighten(@color-swatch3,5%);
+	}
+	.widget .extendednavigation ul li.folder ul {
+		margin-top:0;
+	}
+	.widget .extendednavigation ul li a {
+		padding: 5px 10px 5px 0;
+	}
+	  .widget .extendednavigation ul li.folder .text {
+  		padding: 0px 10px 0 0;
+  	}
+>>>>>>> upstream/develop
 }
