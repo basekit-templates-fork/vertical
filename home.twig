@@ -5,13 +5,13 @@
 
 <div class="page-wrap">
     <header class="bk-header">
-    	<div class="wrapper clearfix">
+        <div class="wrapper clearfix">
         <div class="companyheader">
                 {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png'),"showTplWidget":"0"})|raw}}
                 {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
             </div>
-    		{{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
-    	</div>
+            {{widget('extendednavigation', 'navigationheader', {"align":"left"})|raw}}
+        </div>
     </header>
     
     <section class="feature-section">
@@ -33,19 +33,23 @@
     </section>
     
     <div class="canvas">
-    	<section class="section main home-page">
-    		{{zone('main')|raw}}
-    	</section>
+        <section class="section main home-page">
+            {{zone('main')|raw}}
+        </section>
     </div>
     
     <footer class="bk-footer">
         <div class="wrapper clearfix">
             <div class="responsivecolumns columns-two-50-50">
                 <div class="column columns-two-left">
-                    {{widget('content', 'logobannerright1', {content: '<p>Lorem ipsum dolor sit amet</p>'})|raw}}
+                    <div class="footer-content-widget">
+                        {{widget('content', 'logobannerright1', {content: '<p>Lorem ipsum dolor sit amet</p>'})|raw}}
+                    </div>
                 </div>
                 <div class="column columns-two-right">
-                    {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',   'socialicons':'profile'})|raw}}
+                    <div class="widget-profile-top">
+                        {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType':'socialicons',       'socialicons':'profile'})|raw}}
+                    </div>
                     {{widget('profile', 'footercolumn1profilecopyright', { 'profileType':'copyright',   'copyright':'profile'})|raw}}
                 </div>
             </div>
@@ -54,3 +58,4 @@
 </div>
 
 {% endblock %}
+

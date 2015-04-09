@@ -81,6 +81,7 @@ input[type=submit],
 }
 
 .widget.feature .feature-bgimg {
+  display: table;
     h2 {
         font-family:@font-swatch8-font-family; 
         font-weight: @font-swatch8-font-weight; 
@@ -164,7 +165,6 @@ span h4 {
         .clearfix;
         @media @tablet {
             background-color: transparent;
-            width: 80%;
         }
         li {
             ul {
@@ -283,7 +283,6 @@ span h4 {
                             }
                             a { 
                                 .text {
-                                    color: @font-swatch6-color;
                                     padding: 0;
                                     &:after {
                                         content: "";
@@ -347,18 +346,6 @@ span h4 {
 
 .bk-pt-default .widget.extendednavigation {
     background-color: transparent;
-    ul {
-        li {
-            &.folder{
-                .text {
-                    color:@font-swatch6-color;
-                }
-            }
-            a {
-                color:@font-swatch6-color;
-            }
-        }
-    }
 }
 
 .widget.extendednavigation ul li.folder .text:hover {
@@ -399,8 +386,8 @@ textarea,
     -moz-transition: box-shadow .2s;
     -ms-transition: box-shadow .2s;
     transition: box-shadow .2s;
-    background-color:darken(@color-swatch7,5%);
-    border-radius:3px;
+    background-color: darken(@color-swatch7,5%);
+    border-radius: 3px;
     &:focus {
         box-shadow: 0 0 5px @color-swatch5;
     }
@@ -415,9 +402,10 @@ input[type=search],
 input[type=text],
 input[type=email],
 .signupform fieldset input {
-    padding:8px 10px 5px;   
+    padding: 8px 10px 5px;  
     width: 65%;
-    background-color:darken(@color-swatch7,5%);
+    background-color: darken(@color-swatch7,5%);
+  min-height: 36px;
 }
 
 .blogsearch input.blog-search-input {
@@ -509,6 +497,7 @@ button.btn,
 footer.bk-footer .widget.profile .bk-profile-socialicons span a {
     background-color: @color-swatch3;
     border-radius: 3px;
+  margin-bottom: 0;
 }
 
 footer.bk-footer .widget.profile .bk-profile-socialicons span a:hover {
@@ -1189,6 +1178,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-top:20px;
     padding-left:40px;
     padding-right:40px;
+  @media @tablet {
+    padding: 20px 40px 0px;
+  }
 }
 
 .blog-post-title a, .blog-post-more-link a {
@@ -1260,10 +1252,7 @@ h1, h2, h3, h4, h5, h6 {
     clear:both;
     margin:20px 0px 0px 0px;
     label {
-        height: 0;
-        text-indent: -200px;
-        overflow: hidden;
-        padding-top: 0;
+    display: block;
     }
     input[type=search], input[type=search]:focus {
         width: 75%;
@@ -1315,8 +1304,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-post-title {
-    margin-top:60px;
-    margin-bottom:10px;
+    margin-top: 60px;
+    margin-bottom: 10px;
 }
 
 .blog-post-summary,
@@ -1365,10 +1354,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color:darken(@color-swatch7,3%);
     border-radius:5px;
     padding-bottom:40px;
-}
-
-.widget.blogsearch label {
-    display:none;
 }
 
 .blog-post-content {
@@ -1426,6 +1411,9 @@ h1, h2, h3, h4, h5, h6 {
     text-align: inherit;
 }
 
+.widget-profile-top {
+  margin-bottom: 10px;
+}
 
 /* ===============================
    SLIDESHOW WIDGET
@@ -1476,7 +1464,7 @@ h1, h2, h3, h4, h5, h6 {
             &:after {
                 content: "\2190";
                 color: #fff;
-                top: 8px;
+                top: 9px;
                 @media @mobile {
                     top: 4px;
                 }
@@ -1486,7 +1474,7 @@ h1, h2, h3, h4, h5, h6 {
             &:after {
                 content: "\2192";
                 color: #fff;
-                top: 8px;
+                top: 9px;
                 @media @mobile {
                     top: 4px;
                 }
@@ -1502,6 +1490,7 @@ h1, h2, h3, h4, h5, h6 {
                 color: #fff;
                 letter-spacing: -4px;
                 top: 0;
+                font-size: 20px;
             }
         }
     }
@@ -1538,17 +1527,15 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     bottom: 0;
     margin: auto;
-    @media @mobile {
-        width: 30px;
-        height: 30px;
-    }
+}
+
+.widget.responsiveslideshow .btn-play:after {
+  content: "II";
 }
 
 .widget.responsiveslideshow .slideshow-widget .btn-play:after {
-    top:-7px;
-    @media @mobile {
-        top: -12px;
-    }
+  letter-spacing: 0px;
+  top: -6px;
 }
 
 /* ===============================
@@ -1703,36 +1690,26 @@ input, textarea {
             height: 410px;
             margin-top: 8px;
             margin-bottom: 1em;
-            background-position: center center;
-            background-repeat: no-repeat;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
             overflow: hidden;
-            img {
-                display: none;
-            }
         }
     }
 }
 
 .widget.ecomproduct .ecom-product .btn {
-    border-radius:3px;
+    border-radius: 3px;
 }
 
 .widget.ecomproduct .ecom-product .btn:hover {
     background-color: lighten(@color-swatch3,5%);
-}
-
-.widget.ecomproduct .ecom-product a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 input[type=search], input[type=text], input[type=email], .signupform fieldset input {
-    height:40%;
+      height: 100%;
     display: inline-block;
     vertical-align: top;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
 
 .widget.ecombasket .ecombasket-pull {
@@ -1757,6 +1734,10 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
   display:block;
 }
 
+.productlist-search input {
+  margin-bottom: 10px;
+}
+
 // Ecom filter select
 
 .productlist-filter .form-group {
@@ -1766,12 +1747,12 @@ input[type=search], input[type=text], input[type=email], .signupform fieldset in
 
 .form-group.ecom-productslist-search {
     input {
-        padding: 3px 10px 5px;
+        padding: 4px 10px 5px;
     }
 }
 
 input[type=search], input[type=text] .signupform fieldset input {
-    padding: 3px 10px 5px;
+    padding: 4px 10px 5px;
 }
 
 // Hides *custom* dropdown arrow in Firefox 30 and above
@@ -1847,7 +1828,6 @@ input[type=search], input[type=text] .signupform fieldset input {
             th {
                 border-bottom: 1px solid @color-swatch2;
                 &:nth-child(2) {
-                    border-right: 1px solid mix(@color-swatch2, #fff, 10%);
                 }
 
             }
@@ -1901,7 +1881,6 @@ input[type=search], input[type=text] .signupform fieldset input {
                 padding-right: 170px;
                 vertical-align: top;
                 position: relative;
-                border-right: 1px solid mix(@color-swatch2, #fff, 10%);
                 @media @bp-checkout-compact {
                     padding-right: 0;
                 }
@@ -1952,6 +1931,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                     position: relative;
                     width: 150px;
                     height: 40px;
+                    margin-right: 10px;
                     @media @bp-checkout-compact {
                         position: relative;
                         right: 0;
@@ -1986,7 +1966,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                             left: 0;
                         }
                         &.js-add {
-                            right: 0;
+                            right: 20px;
                         }
                     }
                     // Count
@@ -2000,7 +1980,7 @@ input[type=search], input[type=text] .signupform fieldset input {
                         text-align: center;
                         top: 0;
                         display: block;
-                        width: 70px;
+                        width: 50px;
                         @media @mobile {
                             height: 30px;
                             line-height: 30px;
@@ -2014,9 +1994,6 @@ input[type=search], input[type=text] .signupform fieldset input {
                 text-align: right;
                 @media @mobile {
                     text-align: left;
-                    position: absolute;
-                    right: 0;
-                    bottom: 20px;
                 }
             }
         }
@@ -2043,27 +2020,35 @@ input[type=search], input[type=text] .signupform fieldset input {
 
 .basket-summary-submit, .basket-summary-empty-cta {
   display: inline-block;
-  padding: 0 12px;
+  padding: 8px 12px;
   line-height: 45px;
-  height: 45px;
   font-weight: @font-swatch7-font-weight;
+  border-radius: 3px;
 }
 
 .basket-summary-empty-cta.btn {
-  background-color:@color-swatch3;
+  background-color: @color-swatch3;
   text-decoration: none;
   &:hover {
-    background-color:@color-swatch7;
+    background-color: lighten(@color-swatch3,10%);
   }
 }
 
 .basket-summary-legal-links {
-    padding-top:10px;
+    padding-top: 10px;
     list-style: none;
-    padding-left:0;
+    padding-left: 0;
     &:hover {
         text-decoration:underline!important;
     }
+}
+
+.basket-summary-amount-column {
+  text-align: right;
+}
+
+.basket-summary-items-column {
+  text-align: left;
 }
 
 // ===========================
@@ -2340,11 +2325,8 @@ input[type=search], input[type=text] .signupform fieldset input {
     .blog-post-item {
         padding-bottom:0;
     }
-    .blog-post-title {
-        padding:20px;
-    }
     .widget .extendednavigation a.pull {
-        width:20px;
+        width: 20px;
     }
     select {
         width:100%;
@@ -2359,10 +2341,13 @@ input[type=search], input[type=text] .signupform fieldset input {
         padding: 5px 10px 5px 0;
     }
     .widget .extendednavigation ul li.folder .text {
-        padding:10px 10px 10px 0;
+        padding: 5px 10px 5px 0;
     }
     .widget .extendednavigation ul li.folder ul {
         margin-top:0;
+    }
+    .footer-content-widget {
+      text-align: center;
     }
     .bk-header {
         .widget.extendednavigation .bk-overlay {
@@ -2482,6 +2467,6 @@ input[type=search], input[type=text] .signupform fieldset input {
         padding: 5px 10px 5px 0;
     }
       .widget .extendednavigation ul li.folder .text {
-        padding: 0px 10px 0 0;
+        padding: 0px 20px 0 0;
     }
 }
